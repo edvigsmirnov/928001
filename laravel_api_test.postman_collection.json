@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "baa93c91-5cf5-498e-b491-58fc061d7981",
+		"name": "laravel_api_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21276560"
+	},
+	"item": [
+		{
+			"name": "get_all_users_music",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1/api/music",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"music"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "desc",
+							"description": "sorting value, desc/asc",
+							"disabled": true
+						},
+						{
+							"key": "sort_by",
+							"value": "name",
+							"description": "sorted column name",
+							"disabled": true
+						},
+						{
+							"key": "user_search",
+							"value": "Jaiden",
+							"description": "user field search value",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "64789Ae!",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user_music",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1/api/music/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"music",
+						"1"
+					]
+				},
+				"description": "Put userID in the end of URI\n\napi/music/userID"
+			},
+			"response": []
+		},
+		{
+			"name": "update_music_info_by_id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1/api/music/1?artist&album&year",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"music",
+						"1"
+					],
+					"query": [
+						{
+							"key": "artist",
+							"value": null
+						},
+						{
+							"key": "album",
+							"value": null
+						},
+						{
+							"key": "year",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_music_by_id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1/api/music/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"path": [
+						"api",
+						"music",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
